@@ -12,6 +12,8 @@
 		CB8FF3AB1FDE89D500B8A17B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8FF3A91FDE89D500B8A17B /* Main.storyboard */; };
 		CB8FF3AD1FDE89D500B8A17B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB8FF3AC1FDE89D500B8A17B /* Assets.xcassets */; };
 		CB8FF3B01FDE89D500B8A17B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8FF3AE1FDE89D500B8A17B /* LaunchScreen.storyboard */; };
+		CB8FF3B91FDE920900B8A17B /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8FF3B71FDE920900B8A17B /* Book.swift */; };
+		CB8FF3BA1FDE920900B8A17B /* BookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8FF3B81FDE920900B8A17B /* BookManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		CB8FF3AC1FDE89D500B8A17B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB8FF3AF1FDE89D500B8A17B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB8FF3B11FDE89D500B8A17B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB8FF3B71FDE920900B8A17B /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		CB8FF3B81FDE920900B8A17B /* BookManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 		CB8FF3A41FDE89D500B8A17B /* VisualBookManager */ = {
 			isa = PBXGroup;
 			children = (
+				CB8FF3B71FDE920900B8A17B /* Book.swift */,
+				CB8FF3B81FDE920900B8A17B /* BookManager.swift */,
 				CB8FF3A51FDE89D500B8A17B /* AppDelegate.swift */,
 				CB8FF3A71FDE89D500B8A17B /* ViewController.swift */,
 				CB8FF3A91FDE89D500B8A17B /* Main.storyboard */,
@@ -138,6 +144,8 @@
 			files = (
 				CB8FF3A81FDE89D500B8A17B /* ViewController.swift in Sources */,
 				CB8FF3A61FDE89D500B8A17B /* AppDelegate.swift in Sources */,
+				CB8FF3BA1FDE920900B8A17B /* BookManager.swift in Sources */,
+				CB8FF3B91FDE920900B8A17B /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
