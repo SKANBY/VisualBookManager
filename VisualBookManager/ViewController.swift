@@ -12,6 +12,10 @@ class ViewController: UIViewController {
     let myBook = BookManager()  //전역변수
     @IBOutlet var outputTextView:UITextView!
     
+    @IBOutlet var nameTextField:UITextField!
+    @IBOutlet var genreTextField:UITextField!
+    @IBOutlet var authorTextField:UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,6 +45,18 @@ class ViewController: UIViewController {
         //print(myBook.showAllBook())
         outputTextView.text = myBook.showAllBook()
     }
+    
+    @IBAction func addBookAction(_ sender:AnyObject){
+        let bookTemp = Book()
+        bookTemp.name = nameTextField.text!
+        bookTemp.genre = genreTextField.text!
+        bookTemp.author = authorTextField.text!
+        
+        myBook.addBook(bookTemp)
+        
+        outputTextView.text = "\(nameTextField.text!) 도서가 등록되었습니다. ^^*"
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
