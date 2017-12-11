@@ -57,6 +57,24 @@ class ViewController: UIViewController {
         outputTextView.text = "\(nameTextField.text!) 도서가 등록되었습니다. ^^*"
     }
     
+    @IBAction func findBookAction(_ sender:AnyObject){
+        let resultBook = myBook.findBook(nameTextField.text!)
+        if resultBook != nil{
+            outputTextView.text = resultBook
+        }else{
+            outputTextView.text = "찾으시는 책이 없는데요 ^^;"
+        }
+    }
+    
+    @IBAction func removeBookAction(_ sender:AnyObject){
+        let deleteBook = myBook.removeBook(nameTextField.text!)
+        if deleteBook == true{
+            outputTextView.text = "\(nameTextField.text!) 도서가 지워졌습니다. ㅠㅜ"
+        }else{
+            outputTextView.text = "지우려는 책이 없는데요 ^^;"
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
