@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet var genreTextField:UITextField!
     @IBOutlet var authorTextField:UITextField!
     
+    @IBOutlet var countLabel:UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,6 +41,8 @@ class ViewController: UIViewController {
         myBook.addBook(book2)
         myBook.addBook(book3)
         
+        countLabel.text = "\(myBook.countBook())"
+        
     }
 
     @IBAction func showAllBookAction(_ sender:AnyObject){   //IB = Interface Builder
@@ -55,6 +59,7 @@ class ViewController: UIViewController {
         myBook.addBook(bookTemp)
         
         outputTextView.text = "\(nameTextField.text!) 도서가 등록되었습니다. ^^*"
+        countLabel.text = "\(myBook.countBook())"   //책 갯수 갱신
     }
     
     @IBAction func findBookAction(_ sender:AnyObject){
@@ -70,6 +75,7 @@ class ViewController: UIViewController {
         let deleteBook = myBook.removeBook(nameTextField.text!)
         if deleteBook == true{
             outputTextView.text = "\(nameTextField.text!) 도서가 지워졌습니다. ㅠㅜ"
+            countLabel.text = "\(myBook.countBook())"   //책 갯수 갱신
         }else{
             outputTextView.text = "지우려는 책이 없는데요 ^^;"
         }
